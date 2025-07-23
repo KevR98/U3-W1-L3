@@ -6,6 +6,7 @@ import Welcome from './components/Welcome';
 // import AllTheBooks from './components/AllTheBooks';
 import SingleBook from './components/SingleBook';
 import FantasyBook from './data/books/fantasy.json';
+import BookList from './components/BookList';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
         <main className='flex-grow-1'>
           <Welcome />
           {/* <AllTheBooks /> */}
-          <h1 className='text-center my-3'>QUESTO È UN LIBRO</h1>
+          <BookList books={FantasyBook} />
+          <h1 className='text-center my-3'>QUESTO È SOLO UN LIBRO</h1>
           <SingleBook
-            copertina={FantasyBook[0].img}
+            immagine={FantasyBook[0].img}
             title={FantasyBook[0].title}
             price={FantasyBook[0].price}
             asin={FantasyBook[0].asin}

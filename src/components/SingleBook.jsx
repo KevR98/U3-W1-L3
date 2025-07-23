@@ -21,7 +21,7 @@ class SingleBook extends Component {
               }`}
               onClick={this.cardSelected}
             >
-              <Card.Img variant='top' src={this.props.copertina} />
+              <Card.Img variant='top' src={this.props.immagine} />
               <Card.Body className='card-body'>
                 <div className='content'>
                   <Card.Title>{this.props.title}</Card.Title>
