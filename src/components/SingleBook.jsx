@@ -2,12 +2,25 @@ import { Component } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 class SingleBook extends Component {
+  state = {
+    selected: false,
+  };
+
+  cardSelected = () => {
+    this.setState({ selected: !this.state.selected });
+  };
+
   render() {
     return (
       <Container className='my-2'>
         <Row>
           <Col xs={12} md={6} lg={4} xl={3} className='g-2'>
-            <Card className='card'>
+            <Card
+              className={`card ${
+                this.state.selected ? 'border-danger border-5' : ''
+              }`}
+              onClick={this.cardSelected}
+            >
               <Card.Img variant='top' src={this.props.copertina} />
               <Card.Body className='card-body'>
                 <div className='content'>
