@@ -10,6 +10,8 @@ const SingleBook = (props) => {
             <Card.Body className='card-body'>
               <div className='content'>
                 <Card.Title>{props.title}</Card.Title>
+                <Card.Text>Category: {props.category}</Card.Text>
+                <Card.Text>Price: {props.price}</Card.Text>
               </div>
               <div>
                 <Button variant='primary'>ACQUISTA</Button>

@@ -21,6 +21,8 @@ function App() {
           <SingleBook
             copertina={FantasyBook[0].img}
             title={FantasyBook[0].title}
+            price={FantasyBook[0].price}
+            asin={FantasyBook[0].asin}
           />
         </main>
         <footer>
