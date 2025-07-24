@@ -8,12 +8,14 @@ const BookList = (props) => {
         <Row>
           {props.books.map((libro) => {
             return (
-              <SingleBook
-                immagine={libro.img}
-                title={libro.title}
-                price={libro.price}
-                asin={libro.asin}
-              />
+              <Col xs={6} md={4} lg={3} xl={2} key={libro.asin}>
+                <SingleBook
+                  immagine={libro.img}
+                  title={libro.title}
+                  price={libro.price}
+                  asin={libro.asin}
+                />
+              </Col>
             );
           })}
         </Row>
